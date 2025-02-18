@@ -12,8 +12,8 @@
     line-height: 1.5;
   }
   
-/* Force Full-Width Navigation */
-.minimal-nav {
+  /* Force Full-Width Navigation */
+  .minimal-nav {
     position: fixed;
     top: 0;
     left: 0;  /* Ensure nav starts at the left */
@@ -52,7 +52,6 @@
     color: #000;
   }
   
-  
   /* Homepage - Drastic, Magazine Cover Look */
   .home .hero {
     height: 100vh;
@@ -65,7 +64,6 @@
     padding-top: 20vh;
     position: relative;
     color: white;
-    
   }
   
   .home .hero h1 {
@@ -75,9 +73,7 @@
     line-height: 0.9;
     text-transform: uppercase;
     letter-spacing: -2px;
-
   }
-  
   
   .subtext {
     font-size: 1.2rem;
@@ -104,8 +100,8 @@
     z-index: -1;
   }
   
-/* Manifesto Page - Editorial Layout */
-body.manifesto {
+  /* Manifesto Page - Editorial Layout */
+  body.manifesto {
     background: url('manifesto.jpg') no-repeat center center;
     background-size: cover;
     color: rgb(33, 33, 33);
@@ -118,7 +114,6 @@ body.manifesto {
     position: relative;
   }
   
-  /* Left-aligned, magazine-style title */
   .manifesto-container {
     max-width: 60%;
     position: relative;
@@ -135,7 +130,6 @@ body.manifesto {
     margin-bottom: 1.5rem;
   }
   
-  /* Smaller intro text */
   .intro-text {
     font-size: 1.5rem;
     font-weight: 300;
@@ -144,7 +138,6 @@ body.manifesto {
     margin-bottom: 2rem;
   }
   
-  /* Bullet point list */
   .manifesto-list {
     list-style: none;
     font-size: 1.2rem;
@@ -157,7 +150,6 @@ body.manifesto {
     font-weight: 400;
   }
   
-  /* Closing statement */
   .closing-text {
     font-size: 1.3rem;
     font-weight: 500;
@@ -205,8 +197,9 @@ body.manifesto {
     margin-left: auto;
     margin-right: auto;
   }
+  
   /* AI Page - Editorial Layout */
-body.ai {
+  body.ai {
     background: url('ai.jpg') no-repeat center center;
     background-size: cover;
     color: white;
@@ -219,7 +212,6 @@ body.ai {
     position: relative;
   }
   
-  /* Left-aligned, magazine-style title */
   .ai-container {
     max-width: 60%;
     position: relative;
@@ -236,7 +228,6 @@ body.ai {
     margin-bottom: 1.5rem;
   }
   
-  /* Smaller intro text */
   .intro-text {
     font-size: 1.8rem;
     font-weight: 400;
@@ -246,7 +237,6 @@ body.ai {
     text-transform: uppercase;
   }
   
-  /* Bullet point list */
   .ai-list {
     list-style: none;
     font-size: 1.4rem;
@@ -259,7 +249,6 @@ body.ai {
     margin-bottom: 1rem;
   }
   
-  /* Closing statement */
   .closing-text {
     font-size: 1.5rem;
     font-weight: 600;
@@ -267,7 +256,6 @@ body.ai {
     max-width: 500px;
   }
   
-  /* AI Interface Layout */
   .ai-interface {
     display: flex;
     flex-direction: row;
@@ -276,7 +264,6 @@ body.ai {
     align-items: flex-start;
   }
   
-  /* Chat Interface */
   .chat-interface {
     width: 40%;
     border: 2px solid rgba(255, 255, 255, 0.2);
@@ -323,7 +310,6 @@ body.ai {
     cursor: pointer;
   }
   
-  /* Prediction Market */
   .prediction-market {
     width: 40%;
     border: 2px solid rgba(255, 255, 255, 0.2);
@@ -354,7 +340,7 @@ body.ai {
   }
   
   /* Store Page - Editorial Layout */
-body.store {
+  body.store {
     background: url('store.jpg') no-repeat center center;
     background-size: cover;
     color: white;
@@ -367,7 +353,6 @@ body.store {
     position: relative;
   }
   
-  /* Left-aligned, magazine-style title */
   .store-container {
     max-width: 60%;
     position: relative;
@@ -384,7 +369,6 @@ body.store {
     margin-bottom: 1.5rem;
   }
   
-  /* Smaller intro text */
   .intro-text {
     font-size: 1.8rem;
     font-weight: 400;
@@ -394,14 +378,12 @@ body.store {
     text-transform: uppercase;
   }
   
-  /* Store Items */
   .store-items {
     display: flex;
     gap: 3rem;
     margin-top: 2rem;
   }
   
-  /* Each Store Item */
   .store-item {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
@@ -433,4 +415,72 @@ body.store {
     cursor: pointer;
     text-transform: uppercase;
   }
-
+  
+  /* Mobile Responsive Adjustments */
+  @media (max-width: 768px) {
+    /* Navigation Adjustments */
+    .minimal-nav {
+      padding: 0.5rem;
+    }
+    .minimal-nav ul {
+      gap: 1rem;
+    }
+    .minimal-nav ul li a {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+  
+    /* Homepage Hero Adjustments */
+    .home .hero {
+      padding-left: 3vw;
+      padding-top: 15vh;
+    }
+    .home .hero h1 {
+      font-size: 20vw; /* Adjust font size for smaller screens */
+    }
+    .home .hero .subtext {
+      font-size: 1rem;
+    }
+  
+    /* General Page Layout (Manifesto, AI, Store) */
+    body.manifesto,
+    body.ai,
+    body.store {
+      padding-left: 5vw;
+      padding-right: 5vw;
+      height: auto;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      align-items: center;
+      text-align: center;
+    }
+    .manifesto-container,
+    .ai-container,
+    .store-container {
+      max-width: 90%;
+    }
+    .manifesto-container h1,
+    .ai-container h1,
+    .store-container h1 {
+      font-size: 12vw;
+      text-align: center;
+    }
+  
+    /* AI Interface Layout Adjustments */
+    .ai-interface {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .chat-interface,
+    .prediction-market {
+      width: 90%;
+    }
+  
+    /* Store Items Layout Adjustments */
+    .store-items {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+  
